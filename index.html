@@ -32,12 +32,20 @@
       <a href="login.html" class="buttons">Login/logout</a>
       <a href="settings.html" class="buttons">Settings</a>
     </div>
-    <input type="image" src="img/add.png" id="addButton" class="buttons" onclick="addTask(event)">
+    <input type="image" src="img/add.png" id="addButton" class="buttons" onclick="openPopup()">
   </nav>
 
   <div id="main">
     <h1>Tuesday 18th February</h1>
-
+  <div id="add-task-popup" class="invisible">
+    <p>Add task info here</p>
+    <form onsubmit=addTask(event)>
+      <label>Task Title<input type="text" name="title"></label>
+      <label>Task status<input type="text" name="status"></label>
+      <button type="submit" >Submit</button>
+    </form>
+    <button onclick="closePopup(event)">Close</button>
+  </div>
     <div id="columns">
       <div id="left-col" class="column">
         <h3>TODO</h3>

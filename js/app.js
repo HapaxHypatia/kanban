@@ -1,6 +1,10 @@
 // TODO Add task button
 // TODO Edit task button
 // TODO save changes back to jsonfile
+// TODO Recurring tasks
+// TODO Date
+// TODO Categories
+// TODO sort and filter
 
 
 function allowDrop(ev) {
@@ -73,15 +77,26 @@ function createTask(container, taskdata){
   newdiv.addEventListener("dragstart", drag)
 }
 
+function openPopup(){
+  // Pop up window to get new task data.
+  let popup = document.getElementById("add-task-popup")
+  popup.style.visibility = "visible"
+}
+
 function addTask(e){
   e.preventDefault()
-  // Pop up window to get new task data.
-  // Set target container from status.
-  // Call create task with task data and container name.
-  console.log(e.target.id)
+  const data = Object.fromEntries(new FormData(e.target).entries());
+  console.log(data)
 }
 
 function editTask(){}
+
+function closePopup(e){
+  e.preventDefault()
+  let popup = e.target.parentElement
+  popup.style.visibility = "hidden"
+
+}
 
 // Everything processed in then statement so that all functions have access to tasks
 load('./sampleTasks.json').then((jsonfile) => jsonfile.tasks).then((tasks) => {
@@ -91,7 +106,7 @@ load('./sampleTasks.json').then((jsonfile) => jsonfile.tasks).then((tasks) => {
         createTask('todo-list', x)
         break;
       case "doing":
-        createTask("doing", x)
+        createTask("doing-list", x)
         break;
       case "done":
         createTask("done-list", x)
