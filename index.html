@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/boiler.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <script src="js/app.js"></script>
+
+  <nav>
+    <div id="nav-group">
+      <a href="login.html" class="buttons">Login/logout</a>
+      <a href="settings.html" class="buttons">Settings</a>
+    </div>
+    <input type="image" src="img/add.png" id="addButton" class="buttons" onclick="addTask(event)">
+  </nav>
+
+  <div id="main">
+    <h1>Tuesday 18th February</h1>
+
+    <div id="columns">
+      <div id="left-col" class="column">
+        <h3>TODO</h3>
+        <div class="notes-list target" id="todo-list" ondrop="drop(event)" ondragenter="allowDrop(event)" ondragover="allowDrop(event)">
+        </div>
+      </div>
+      <div id="mid-col" class="column">
+        <h3>DOING</h3>
+        <div id="doing" class="target"  ondrop="drop(event)" ondragenter="allowDrop(event)" ondragover="allowDrop(event)">
+        </div>
+      </div>
+      <div id="right-col" class="column">
+        <h3>DONE</h3>
+        <div class="notes-list target"  id="done-list" ondrop="drop(event)" ondragenter="allowDrop(event)" ondragover="allowDrop(event)">
+        </div >
+      </div>
+    </div>
+  </div>
+<footer>
+  Here is some information
+</footer>
+</body>
+
+</html>
