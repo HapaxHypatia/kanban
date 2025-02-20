@@ -106,11 +106,23 @@ h4 {
   transform: skewX(25deg);
 }
 
+.todo {
+  color: red;
+}
+
+.doing {
+  color: orange;
+}
+
+.done {
+  color: green;
+}
+
 .note:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-#doing {
+#doing-list {
   display: grid;
   gap: 10px;
   padding: 5px;
@@ -118,7 +130,7 @@ h4 {
   min-height: 500px;
 }
 
-#doing .note {
+#doing-list .note {
   margin: 0 auto;
   width: 200px;
   height: 200px;
