@@ -84,7 +84,7 @@ function addTask(e){
 function editTask(){}
 
 // Everything processed in then statement so that all functions have access to tasks
-load('./tasks.json').then((jsonfile) => jsonfile.tasks).then((tasks) => {
+load('./sampleTasks.json').then((jsonfile) => jsonfile.tasks).then((tasks) => {
   for (let x of tasks){
     switch (x.Status){
       case "todo":
