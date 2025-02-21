@@ -32,19 +32,27 @@
       <a href="login.html" class="buttons">Login/logout</a>
       <a href="settings.html" class="buttons">Settings</a>
     </div>
-    <input type="image" src="img/add.png" id="addButton" class="buttons" onclick="openPopup()">
+    <input type="image" src="img/add.png" id="addButton" class="buttons" onclick="openPopup('add-task-popup')">
   </nav>
 
   <div id="main">
     <h1>Tuesday 18th February</h1>
   <div id="add-task-popup" class="invisible">
+    <input type="image" src="img/close.png" class="close-button" class="buttons" onclick="closePopup('add-task-popup')">
     <p>Add task info here</p>
     <form onsubmit=addTask(event)>
-      <label>Task Title<input type="text" name="title"></label>
-      <label>Task status<input type="text" name="status"></label>
+      <label>Task Title<input type="text" name="Title"></label>
+      <fieldset>
+        <legend>Task Status</legend>
+        <input type="radio" id="todo-option" name="Status" value="todo">
+        <label for="todo-option">To do</label><br>
+        <input type="radio" id="doing-option" name="Status" value="doing">
+        <label for="doing-option">Doing</label><br>
+        <input type="radio" id="done-option" name="Status" value="done">
+        <label for="done-option">Done</label>
+      </fieldset>
       <button type="submit" >Submit</button>
     </form>
-    <button onclick="closePopup(event)">Close</button>
   </div>
     <div id="columns">
       <div id="left-col" class="column">
