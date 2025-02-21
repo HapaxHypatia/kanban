@@ -1,9 +1,11 @@
-// TODO Edit task button
-// TODO save changes back to jsonfile
+// TODO login
+// TODO settings
+// TODO Complete edit task button
+// TODO Save changes back to jsonfile
 // TODO Recurring tasks
-// TODO Date
 // TODO Categories, types
 // TODO sort and filter
+// TODO split into today and this week
 
 // Problems
 // TODO task list with few notes displays with big vertical gap because of min height

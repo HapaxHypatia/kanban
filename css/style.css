@@ -33,9 +33,10 @@ h1 {
 
 #addButton {
   margin-top: 10px;
-  height: 40px;
+  height: 30px;
   background: white;
   padding-top: 2px;
+  padding: 7px 5px 5px 5px;
 }
 
 h3 {
@@ -68,7 +69,7 @@ h4 {
   grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
   gap: 10px;
   padding: 5px;
-  min-height: 500px;
+  min-height: 70vh;
 }
 
 .disabled {
@@ -112,6 +113,7 @@ h4 {
 
 .doing {
   color: orange;
+  font-size: 1.5em;
 }
 
 .done {
@@ -127,7 +129,7 @@ h4 {
   gap: 10px;
   padding: 5px;
   grid-template-columns: 1fr 1fr;
-  min-height: 500px;
+  min-height: 70vh;
 }
 
 #doing-list .note {
@@ -174,6 +176,12 @@ footer {
 form {
   text-align: left;
   margin: 20px;
+}
+
+footer {
+  color: lightcyan;
+  font-family: "Reenie Beanie", sans-serif;
+  font-size: 2em;
 }
 
 /*# sourceMappingURL=style.css.map */
