@@ -2,7 +2,7 @@
 // TODO save changes back to jsonfile
 // TODO Recurring tasks
 // TODO Date
-// TODO Categories
+// TODO Categories, types
 // TODO sort and filter
 
 // Problems
@@ -120,6 +120,7 @@ function createTask(containerID, taskdata){
   // Get the newly created div from the DOM & assign handler
   let newdiv = document.getElementById(taskdata.ID)
   newdiv.addEventListener("dragstart", drag)
+  newdiv.addEventListener("click", editTask)
 }
 
 function openPopup(id){
@@ -151,7 +152,8 @@ function addTask(e){
 }
 
 function editTask(e){
-
+  console.log("Editing " + e.target.id)
+  openPopup("edit-dialog")
 }
 
 
@@ -170,6 +172,8 @@ load('./sampleTasks.json').then((jsonfile) => jsonfile.tasks).then((tasks) => {
         createTask("done-list", x)
         break;
     }
+const d = new Date().toLocaleDateString('en-uk', { weekday:"long", month:"long", day:"numeric"})
+document.getElementById("date").innerHTML = d;
   }
 
   // Do not delete these very important closing brackets

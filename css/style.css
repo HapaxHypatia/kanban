@@ -140,7 +140,7 @@ footer {
   padding: 20px 5px 10px 5px;
 }
 
-#add-task-popup {
+.popup {
   position: absolute;
   top: 50%;
   left: 50%;

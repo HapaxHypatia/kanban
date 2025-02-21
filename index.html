@@ -36,8 +36,8 @@
   </nav>
 
   <div id="main">
-    <h1>Tuesday 18th February</h1>
-  <div id="add-task-popup" class="invisible">
+    <h1 id="date"></h1>
+  <div id="add-task-popup" class="popup">
     <input type="image" src="img/close.png" class="close-button" class="buttons" onclick="closePopup('add-task-popup')">
     <p>Add task info here</p>
     <form onsubmit=addTask(event)>
@@ -54,6 +54,12 @@
       <button type="submit" >Submit</button>
     </form>
   </div>
+
+  <div id="edit-dialog" class="popup">
+    <input type="image" src="img/close.png" class="close-button" class="buttons" onclick="closePopup('edit-dialog')">
+    Editing...
+  </div>
+
     <div id="columns">
       <div id="left-col" class="column">
         <h3>TODO</h3>
